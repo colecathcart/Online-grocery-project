@@ -1,0 +1,107 @@
+
+.homepage{
+    padding: 10px;
+}
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+.item{
+    min-height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.itemprice{
+    margin-right: 10px;
+    padding: 3px;
+    background-color:rgb(164, 224, 194);
+}
+
+.cartaddbutton{
+    border-radius: 5px;
+    border-width: 0;
+    padding: 5px;
+    background-color:rgb(152, 115, 187);
+    color: white;
+}
+
+button:active {
+    transform: scale(0.97);
+    box-shadow: 2px 1px 22px 1px rgba(0, 0, 0, 0.24)
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    background-color: antiquewhite;
+}
+
+.topbar{
+    background-color: rgb(152, 115, 187);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.topbarbutton{
+    border: 0px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.createpage{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 10px;
+}
+
+input{
+    border: 0px;
+    background-color: rgb(228, 227, 227);
+    border-radius: 5px;
+    height: 30px;
+}
+
+.createaccbutton{
+    border-radius: 5px;
+    border-width: 0;
+    padding: 5px;
+    background-color:rgb(152, 115, 187);
+    color: white;
+}
+
+.login{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.loginbuttons{
+    display: flex;
+    gap: 10px;
+}
+
+.errmsg{
+    color: red;
+}
