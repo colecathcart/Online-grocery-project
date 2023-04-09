@@ -9,8 +9,9 @@ import Employees from "./pages/Employees";
 import Home from "./pages/Home";
 import Info from "./pages/Info";
 import Login from "./pages/Login";
-import Order from "./pages/Order";
-import Staffhome from "./pages/Staffhome";
+import Manhome from "./pages/Manhome";
+import Workhome from "./pages/Workhome";
+import Emphome from "./pages/Emphome";
 import "./style.css"
 
 function App() {
@@ -21,11 +22,12 @@ function App() {
           <Route path="/" element={<Login/>}/>
           <Route path="/create" element={<Create/>}/>
           <Route path="/home" element={<Home/>}/>
-          <Route path="/staffhome" element={<Staffhome/>}/>
+          <Route path="/manhome" element={<Manhome/>}/>
+          <Route path="/workhome" element={<Workhome/>}/>
           <Route path="/cart" element={<Cart/>}/>
-          <Route path="/order" element={<Order/>}/>
           <Route path="/employees" element={<Employees/>}/>
           <Route path="/info" element={<Info/>}/>
+          <Route path="/emphome" element={<Emphome/>}/>
         </Routes>
       </BrowserRouter>
     </div>

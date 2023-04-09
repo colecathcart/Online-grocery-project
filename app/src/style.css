@@ -11,10 +11,36 @@
 
 .item{
     min-height: 200px;
+    max-width: 200px;
     border-radius: 5px;
     padding: 10px;
     margin: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.employees{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+.employee{
+    max-width: 200px;
+    min-height: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: rgb(227, 215, 240);
+}
+
+.empinfo{
+    border-radius: 10px;
+    background-color: rgb(220, 196, 241);
 }
 
 .itemprice{
@@ -31,14 +57,57 @@
     color: white;
 }
 
+.filters{
+    background-color: rgb(232, 215, 247);
+    border-radius: 10px;
+    
+    padding: 10px;
+    margin: 5px;
+    width: fit-content;
+    gap: 5px;
+}
+
+.subfilters{
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.filteroptions{
+    display: flex;
+    flex-direction: row;
+}
+
+.search{
+    width: fit-content;
+}
+
+.checkboxes{
+    display: flex;
+    padding-bottom: 10px;
+    padding: 5px;
+    gap: 20px;
+}
+
+.searchbutton{
+    border-radius: 5px;
+    border-width: 0;
+    padding: 5px;
+    height: 30px;
+    margin-left: 5px;
+    background-color:rgb(152, 115, 187);
+    color: white;
+}
+
 button:active {
     transform: scale(0.97);
     box-shadow: 2px 1px 22px 1px rgba(0, 0, 0, 0.24)
 }
 
 img{
-    width: 200px;
+    width: auto;
     height: 200px;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: fill;
     background-color: antiquewhite;
 }
@@ -56,6 +125,68 @@ img{
     width: 100px;
     height: 30px;
     border-radius: 10px;
+}
+
+.cartcontents{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cartable{
+    background-color: rgb(227, 215, 240);
+    border-radius: 10px;
+    width: 50%;
+}
+
+.cartable, tr, td, th{
+    padding: 10px;
+    padding-right: 20px;
+}
+
+.ordertable, tr, td, th{
+    padding: 10px;
+    padding-right: 20px;
+}
+
+tr:nth-child(odd){background-color: rgb(208, 183, 231);}
+
+.order{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ot{
+    background-color: rgb(227, 215, 240);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px;
+}
+
+.orderadded{
+    color: green;
+}
+
+.orderbutton{
+    border-radius: 5px;
+    border-width: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px;
+    background-color:rgb(152, 115, 187);
+    color: white;
+}
+
+.checkout{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(227, 215, 240);
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
 }
 
 .createpage{
@@ -80,6 +211,10 @@ input{
     background-color: rgb(228, 227, 227);
     border-radius: 5px;
     height: 30px;
+}
+
+.pricerange{
+    padding: 5px;
 }
 
 .createaccbutton{

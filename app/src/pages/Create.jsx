@@ -12,6 +12,8 @@ const Create = () => {
         address: ""
     })
 
+    const [errmsg, setErr] = useState("")
+
     const navigate = useNavigate()
 
     const handleChange = (e) =>{
@@ -21,8 +23,13 @@ const Create = () => {
     const handleClick = async e =>{
         e.preventDefault()
         try {
+            const taken = await axios.get(("http://localhost:8080/create?username=" + user.username))
+            if(taken.data.length === 0){
             await axios.post("http://localhost:8080/create", user)
             navigate("/")
+            } else {
+                setErr("username already taken")
+            }
         } catch (error) {
             console.log(error)
         }
@@ -40,6 +47,7 @@ const Create = () => {
             <input type="text" placeholder="last name" onChange={handleChange} name="lname"/>
             <input type="text" placeholder="address" onChange={handleChange} name="address"/>
             <button className="createaccbutton" onClick={handleClick}>Create Account</button>
+            <p className="errmsg"><i>{errmsg}</i></p>
         </div>
     )
 }

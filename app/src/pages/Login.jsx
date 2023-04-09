@@ -10,23 +10,23 @@ const Login = () => {
         id: "",
     })
 
+    const [errmsgu, setErr] = useState("")
+    const [errmsgs, setErr2] = useState("")
+
     const navigate = useNavigate()
-    var errmsgu = ""
-    var errmsgs = ""
 
     const handleChange = (e) =>{
         setUser(prev=>({...prev, [e.target.name]: e.target.value}))
     }
 
     const handleUserClick = async e =>{
-        console.log("hello")
         e.preventDefault()
         try {
             const res = await axios.get(("http://localhost:8080/login?username=" + user.cusername + "&password=" + user.password))
             if(res.data.length > 0){
                 navigate("/home")
             } else {
-                errmsgu = "incorrect credentials"
+                setErr("incorrect credentials")
             }
             console.log("back")
         } catch (error) {
@@ -38,7 +38,17 @@ const Login = () => {
         e.preventDefault()
         try {
             const res = await axios.get(("http://localhost:8080/login?username=" + user.susername + "&password=" + user.password))
-            console.log(res)
+            if(res.data.length > 0){
+                const res2 = await axios.get(("http://localhost:8080/login?username=" + user.susername + "&isman=any"))
+                if(res2.data.length > 0){
+                    navigate("/manhome")
+                } else {
+                    await axios.post("http://localhost:8080/login", user)
+                    navigate("/emphome")
+                }
+            } else {
+                setErr2("incorrect credentials")
+            }
         } catch (error) {
             console.log(error)
         }
