@@ -1,3 +1,6 @@
+//Some basic axios setup based on this tutorial video:
+//https://youtu.be/fPuLnzSjPLE
+
 import express, { request, response } from "express"
 import mysql from "mysql"
 import cors from "cors"
