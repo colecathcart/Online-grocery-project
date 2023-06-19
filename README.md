@@ -1,4 +1,4 @@
-# CPSC471Project
+# Online Grocery Store Project
 
 RUN INSTRUCTIONS:
 
