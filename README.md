@@ -1,5 +1,5 @@
 # Online Grocery Store Project
-A simple React webapp demonstrating the practical use of a MySQL database
+A simple React webapp demonstrating the practical use of a MySQL database.
 
 RUN INSTRUCTIONS:
 
