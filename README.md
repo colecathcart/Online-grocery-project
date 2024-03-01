@@ -1,5 +1,6 @@
 # Online Grocery Store Project
 A simple React webapp demonstrating the practical use of a MySQL database
+
 RUN INSTRUCTIONS:
 
  - You must have nodejs and MySQL server installed on your computer
